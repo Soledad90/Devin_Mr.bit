@@ -1,202 +1,103 @@
-/**
- * TVS Rubber Boots - Size Data
- * Dữ liệu sản phẩm và bảng size cho ủng cao su
- */
-
-const PRODUCTS = [
+/* ═══════ DATA (từ file Excel TVS) ═══════ */
+var PRODUCTS = [
   {
-    id: "RB-001",
-    name: "Ủng Bảo Hộ Xanh Rêu",
-    code: "RB-001",
-    color: "#2d5016",
-    type: "high",
-    description: "Ủng cao cổ, chống nước, phù hợp công trường"
+    id: 'RAINIS_AH', name: 'RAINIS AH', type: 'tall', image: 'images/products/RAINIS_AH.jpg', hasCalf: true,
+    colors: [{name:'Xanh Rêu / Xám', hex:'#3d5a3e'}],
+    sizes: [
+      {uk:'5',  us:'6',  eur:38, h:325, bg:212,   bw:82,  ig:215, cg:374, fl:240},
+      {uk:'6',  us:'7',  eur:39, h:325, bg:218.4, bw:87,  ig:221, cg:382, fl:247},
+      {uk:'7',  us:'8',  eur:40, h:330, bg:224.7, bw:92,  ig:227, cg:390, fl:255},
+      {uk:'8',  us:'9',  eur:41, h:330, bg:231.1, bw:97,  ig:233, cg:398, fl:263},
+      {uk:'9',  us:'10', eur:42, h:335, bg:237.4, bw:102, ig:239, cg:406, fl:273},
+      {uk:'10', us:'11', eur:43, h:335, bg:243.8, bw:107, ig:245, cg:414, fl:281},
+      {uk:'11', us:'12', eur:44, h:340, bg:250.2, bw:112, ig:251, cg:422, fl:289},
+      {uk:'12', us:'13', eur:45, h:340, bg:256.6, bw:117, ig:257, cg:430, fl:297},
+      {uk:'13', us:'14', eur:46, h:345, bg:263,   bw:122, ig:263, cg:438, fl:305},
+    ]
   },
   {
-    id: "RB-002",
-    name: "Ủng Công Nghiệp Đen",
-    code: "RB-002",
-    color: "#1a1a1a",
-    type: "high",
-    description: "Ủng cao su đen, chống hóa chất"
+    id: 'RAINIS_AM', name: 'RAINIS AM', type: 'mid', image: 'images/products/RAINIS_AM.jpg', hasCalf: true,
+    colors: [{name:'Xanh Đậm / Kem', hex:'#2d4a2d'}],
+    sizes: [
+      {uk:'5',  us:'6',  eur:38, h:253, bg:212,   bw:82,  ig:215, cg:364, fl:240},
+      {uk:'6',  us:'7',  eur:39, h:253, bg:218.4, bw:87,  ig:221, cg:372, fl:247},
+      {uk:'7',  us:'8',  eur:40, h:258, bg:224.7, bw:92,  ig:227, cg:380, fl:255},
+      {uk:'8',  us:'9',  eur:41, h:258, bg:231.1, bw:97,  ig:233, cg:388, fl:263},
+      {uk:'9',  us:'10', eur:42, h:263, bg:237.4, bw:102, ig:239, cg:396, fl:273},
+      {uk:'10', us:'11', eur:43, h:263, bg:243.8, bw:107, ig:245, cg:404, fl:281},
+      {uk:'11', us:'12', eur:44, h:268, bg:250.2, bw:112, ig:251, cg:412, fl:289},
+      {uk:'12', us:'13', eur:45, h:268, bg:256.6, bw:117, ig:257, cg:420, fl:297},
+      {uk:'13', us:'14', eur:46, h:273, bg:263,   bw:122, ig:263, cg:428, fl:305},
+    ]
   },
   {
-    id: "RB-003",
-    name: "Ủng Nông Nghiệp Xanh",
-    code: "RB-003",
-    color: "#166534",
-    type: "high",
-    description: "Ủng cao su xanh, phù hợp đồng ruộng"
+    id: 'RAINIS_KH', name: 'RAINIS KH (KID)', type: 'tall', image: 'images/products/RAINIS_KH_KID.jpg', hasCalf: true,
+    colors: [{name:'Hồng / Trắng', hex:'#E8836B'}],
+    sizes: [
+      {uk:'6',  us:'7',  eur:25, h:164, bg:166,   bw:69, ig:180, cg:264, fl:167},
+      {uk:'8',  us:'9',  eur:27, h:177, bg:180,   bw:73, ig:189, cg:280, fl:177},
+      {uk:'10', us:'11', eur:29, h:190, bg:188,   bw:77, ig:198, cg:296, fl:187},
+      {uk:'12', us:'13', eur:31, h:205, bg:196,   bw:80, ig:207, cg:312, fl:197},
+      {uk:'1K', us:'2K', eur:33, h:220, bg:209,   bw:83, ig:216, cg:328, fl:207},
+      {uk:'3K', us:'4K', eur:35, h:235, bg:218.5, bw:86, ig:225, cg:344, fl:217},
+    ]
   },
   {
-    id: "RB-004",
-    name: "Ủng Ngắn Cổ Vàng",
-    code: "RB-004",
-    color: "#ca8a04",
-    type: "low",
-    description: "Ủng ngắn cổ, nhẹ, linh hoạt"
+    id: 'FOLDIS', name: 'FOLDIS', type: 'tall', image: 'images/products/FOLDIS.jpg', hasCalf: true,
+    colors: [{name:'Xanh Rêu / Xám', hex:'#3d5a3e'}],
+    sizes: [
+      {uk:'4',  us:'5',  eur:37, h:375, bg:205.7, bw:77,  ig:209, cg:366, fl:230},
+      {uk:'5',  us:'6',  eur:38, h:378, bg:212,   bw:82,  ig:215, cg:374, fl:240},
+      {uk:'6',  us:'7',  eur:39, h:381, bg:218.4, bw:87,  ig:221, cg:382, fl:247},
+      {uk:'7',  us:'8',  eur:40, h:384, bg:224.7, bw:92,  ig:227, cg:390, fl:255},
+      {uk:'8',  us:'9',  eur:41, h:387, bg:231.1, bw:97,  ig:233, cg:398, fl:263},
+      {uk:'9',  us:'10', eur:42, h:390, bg:237.4, bw:102, ig:239, cg:406, fl:273},
+      {uk:'10', us:'11', eur:43, h:393, bg:243.8, bw:107, ig:245, cg:414, fl:281},
+      {uk:'11', us:'12', eur:44, h:396, bg:250.2, bw:112, ig:251, cg:422, fl:289},
+      {uk:'12', us:'13', eur:45, h:399, bg:256.6, bw:117, ig:257, cg:430, fl:297},
+      {uk:'13', us:'14', eur:46, h:402, bg:263,   bw:122, ig:263, cg:438, fl:305},
+    ]
   },
   {
-    id: "RB-005",
-    name: "Ủng An Toàn Cam",
-    code: "RB-005",
-    color: "#ea580c",
-    type: "high",
-    description: "Ủng phản quang cam, an toàn lao động"
+    id: 'ANCHOR', name: 'ANCHOR', type: 'short', image: 'images/products/ANCHOR.jpg', hasCalf: false,
+    colors: [{name:'Xanh Rêu / Xám', hex:'#2d5a2d'}],
+    sizes: [
+      {uk:'4',  us:'5',  eur:37, h:148, bg:222,   bw:92,  ig:225, cg:null, fl:243},
+      {uk:'5',  us:'6',  eur:38, h:152, bg:226.5, bw:94,  ig:229, cg:null, fl:249.7},
+      {uk:'6',  us:'7',  eur:39, h:156, bg:231,   bw:96,  ig:233, cg:null, fl:256},
+      {uk:'7',  us:'8',  eur:40, h:160, bg:235.5, bw:98,  ig:237, cg:null, fl:263},
+      {uk:'8',  us:'9',  eur:41, h:164, bg:240,   bw:100, ig:241, cg:null, fl:269.7},
+      {uk:'9',  us:'10', eur:42, h:168, bg:244.5, bw:102, ig:245, cg:null, fl:276},
+      {uk:'10', us:'11', eur:43, h:172, bg:249,   bw:104, ig:249, cg:null, fl:283},
+      {uk:'11', us:'12', eur:44, h:176, bg:253.5, bw:106, ig:253, cg:null, fl:289},
+      {uk:'12', us:'13', eur:45, h:180, bg:258,   bw:108, ig:257, cg:null, fl:296},
+      {uk:'13', us:'14', eur:46, h:184, bg:262.5, bw:110, ig:261, cg:null, fl:303},
+    ]
   },
   {
-    id: "RB-006",
-    name: "Ủng Trắng Thực Phẩm",
-    code: "RB-006",
-    color: "#f5f5f4",
-    type: "high",
-    description: "Ủng trắng chuyên ngành thực phẩm"
+    id: 'FLEXOSLIP', name: 'FLEXOSLIP', type: 'flat', image: 'images/products/FLEXOSLIP.jpg', hasCalf: false,
+    colors: [{name:'Xanh Dương', hex:'#89BCE0'}],
+    sizes: [
+      {uk:'2\u00bd', us:'3\u00bd', eur:35, h:68, bg:197.4, bw:88, ig:213, cg:null, fl:223.5},
+      {uk:'3\u00bd', us:'4\u00bd', eur:36, h:70, bg:202,   bw:89, ig:217, cg:null, fl:230},
+      {uk:'4',       us:'5',       eur:37, h:72, bg:206.5, bw:90, ig:221, cg:null, fl:236.7},
+      {uk:'5',       us:'6',       eur:38, h:74, bg:211,   bw:91, ig:225, cg:null, fl:243.4},
+      {uk:'5\u00bd', us:'6\u00bd', eur:39, h:76, bg:215.5, bw:92, ig:229, cg:null, fl:250},
+      {uk:'6\u00bd', us:'7\u00bd', eur:40, h:78, bg:220,   bw:93, ig:233, cg:null, fl:256.7},
+      {uk:'7',       us:'8',       eur:41, h:80, bg:224.5, bw:94, ig:237, cg:null, fl:263},
+      {uk:'8',       us:'9',       eur:42, h:82, bg:229,   bw:95, ig:241, cg:null, fl:270},
+      {uk:'9',       us:'10',      eur:43, h:84, bg:233.5, bw:96, ig:245, cg:null, fl:276.7},
+      {uk:'9\u00bd', us:'10\u00bd',eur:44, h:86, bg:238,   bw:97, ig:249, cg:null, fl:283},
+      {uk:'10\u00bd',us:'11\u00bd',eur:45, h:88, bg:242.5, bw:98, ig:253, cg:null, fl:290},
+      {uk:'11',      us:'12',      eur:46, h:90, bg:247,   bw:99, ig:257, cg:null, fl:297},
+    ]
   },
-  {
-    id: "RB-007",
-    name: "Ủng Ngắn Đen",
-    code: "RB-007",
-    color: "#292524",
-    type: "low",
-    description: "Ủng ngắn cổ đen, đa dụng"
-  },
-  {
-    id: "RB-008",
-    name: "Ủng Xanh Navy",
-    code: "RB-008",
-    color: "#1e3a5f",
-    type: "high",
-    description: "Ủng xanh navy, chống trượt"
-  }
 ];
 
-/**
- * Bảng size - mỗi entry chứa thông số cho từng mã và size
- * Đơn vị: mm
- * footLength: Chiều dài bàn chân
- * ballGirth: Vòng khớp ngón chân
- * ballWidth: Bề ngang khớp ngón chân
- * instepGirth: Vòng mu bàn chân
- * calfGirth: Vòng bắp chân (chỉ cho ủng cao)
- */
-const SIZE_CHART = [
-  // RB-001 Ủng Bảo Hộ Xanh Rêu (High boot)
-  { productId: "RB-001", uk: 4, us: 5, eur: 37, footLength: 235, ballGirth: 210, ballWidth: 82, instepGirth: 215, calfGirth: 340 },
-  { productId: "RB-001", uk: 5, us: 6, eur: 38, footLength: 242, ballGirth: 216, ballWidth: 84, instepGirth: 220, calfGirth: 350 },
-  { productId: "RB-001", uk: 6, us: 7, eur: 39, footLength: 249, ballGirth: 222, ballWidth: 87, instepGirth: 225, calfGirth: 360 },
-  { productId: "RB-001", uk: 7, us: 8, eur: 40, footLength: 256, ballGirth: 228, ballWidth: 89, instepGirth: 230, calfGirth: 370 },
-  { productId: "RB-001", uk: 8, us: 9, eur: 41, footLength: 263, ballGirth: 234, ballWidth: 92, instepGirth: 236, calfGirth: 380 },
-  { productId: "RB-001", uk: 9, us: 10, eur: 42, footLength: 270, ballGirth: 240, ballWidth: 94, instepGirth: 241, calfGirth: 390 },
-  { productId: "RB-001", uk: 10, us: 11, eur: 43, footLength: 277, ballGirth: 246, ballWidth: 97, instepGirth: 247, calfGirth: 400 },
-  { productId: "RB-001", uk: 11, us: 12, eur: 44, footLength: 284, ballGirth: 252, ballWidth: 99, instepGirth: 252, calfGirth: 410 },
-  { productId: "RB-001", uk: 12, us: 13, eur: 45, footLength: 291, ballGirth: 258, ballWidth: 102, instepGirth: 258, calfGirth: 420 },
-  { productId: "RB-001", uk: 13, us: 14, eur: 46, footLength: 298, ballGirth: 264, ballWidth: 104, instepGirth: 263, calfGirth: 430 },
-
-  // RB-002 Ủng Công Nghiệp Đen (High boot)
-  { productId: "RB-002", uk: 4, us: 5, eur: 37, footLength: 235, ballGirth: 212, ballWidth: 83, instepGirth: 217, calfGirth: 345 },
-  { productId: "RB-002", uk: 5, us: 6, eur: 38, footLength: 242, ballGirth: 218, ballWidth: 85, instepGirth: 222, calfGirth: 355 },
-  { productId: "RB-002", uk: 6, us: 7, eur: 39, footLength: 249, ballGirth: 224, ballWidth: 88, instepGirth: 227, calfGirth: 365 },
-  { productId: "RB-002", uk: 7, us: 8, eur: 40, footLength: 256, ballGirth: 230, ballWidth: 90, instepGirth: 233, calfGirth: 375 },
-  { productId: "RB-002", uk: 8, us: 9, eur: 41, footLength: 263, ballGirth: 236, ballWidth: 93, instepGirth: 238, calfGirth: 385 },
-  { productId: "RB-002", uk: 9, us: 10, eur: 42, footLength: 270, ballGirth: 242, ballWidth: 95, instepGirth: 244, calfGirth: 395 },
-  { productId: "RB-002", uk: 10, us: 11, eur: 43, footLength: 277, ballGirth: 248, ballWidth: 98, instepGirth: 249, calfGirth: 405 },
-  { productId: "RB-002", uk: 11, us: 12, eur: 44, footLength: 284, ballGirth: 254, ballWidth: 100, instepGirth: 255, calfGirth: 415 },
-  { productId: "RB-002", uk: 12, us: 13, eur: 45, footLength: 291, ballGirth: 260, ballWidth: 103, instepGirth: 260, calfGirth: 425 },
-  { productId: "RB-002", uk: 13, us: 14, eur: 46, footLength: 298, ballGirth: 266, ballWidth: 105, instepGirth: 266, calfGirth: 435 },
-
-  // RB-003 Ủng Nông Nghiệp Xanh (High boot)
-  { productId: "RB-003", uk: 4, us: 5, eur: 37, footLength: 235, ballGirth: 214, ballWidth: 84, instepGirth: 218, calfGirth: 350 },
-  { productId: "RB-003", uk: 5, us: 6, eur: 38, footLength: 242, ballGirth: 220, ballWidth: 86, instepGirth: 224, calfGirth: 360 },
-  { productId: "RB-003", uk: 6, us: 7, eur: 39, footLength: 249, ballGirth: 226, ballWidth: 89, instepGirth: 229, calfGirth: 370 },
-  { productId: "RB-003", uk: 7, us: 8, eur: 40, footLength: 256, ballGirth: 232, ballWidth: 91, instepGirth: 235, calfGirth: 380 },
-  { productId: "RB-003", uk: 8, us: 9, eur: 41, footLength: 263, ballGirth: 238, ballWidth: 94, instepGirth: 240, calfGirth: 390 },
-  { productId: "RB-003", uk: 9, us: 10, eur: 42, footLength: 270, ballGirth: 244, ballWidth: 96, instepGirth: 246, calfGirth: 400 },
-  { productId: "RB-003", uk: 10, us: 11, eur: 43, footLength: 277, ballGirth: 250, ballWidth: 99, instepGirth: 251, calfGirth: 410 },
-  { productId: "RB-003", uk: 11, us: 12, eur: 44, footLength: 284, ballGirth: 256, ballWidth: 101, instepGirth: 257, calfGirth: 420 },
-  { productId: "RB-003", uk: 12, us: 13, eur: 45, footLength: 291, ballGirth: 262, ballWidth: 104, instepGirth: 262, calfGirth: 430 },
-  { productId: "RB-003", uk: 13, us: 14, eur: 46, footLength: 298, ballGirth: 268, ballWidth: 106, instepGirth: 268, calfGirth: 440 },
-
-  // RB-004 Ủng Ngắn Cổ Vàng (Low boot - no calfGirth)
-  { productId: "RB-004", uk: 4, us: 5, eur: 37, footLength: 235, ballGirth: 208, ballWidth: 81, instepGirth: 213, calfGirth: null },
-  { productId: "RB-004", uk: 5, us: 6, eur: 38, footLength: 242, ballGirth: 214, ballWidth: 83, instepGirth: 218, calfGirth: null },
-  { productId: "RB-004", uk: 6, us: 7, eur: 39, footLength: 249, ballGirth: 220, ballWidth: 86, instepGirth: 224, calfGirth: null },
-  { productId: "RB-004", uk: 7, us: 8, eur: 40, footLength: 256, ballGirth: 226, ballWidth: 88, instepGirth: 229, calfGirth: null },
-  { productId: "RB-004", uk: 8, us: 9, eur: 41, footLength: 263, ballGirth: 232, ballWidth: 91, instepGirth: 235, calfGirth: null },
-  { productId: "RB-004", uk: 9, us: 10, eur: 42, footLength: 270, ballGirth: 238, ballWidth: 93, instepGirth: 240, calfGirth: null },
-  { productId: "RB-004", uk: 10, us: 11, eur: 43, footLength: 277, ballGirth: 244, ballWidth: 96, instepGirth: 246, calfGirth: null },
-  { productId: "RB-004", uk: 11, us: 12, eur: 44, footLength: 284, ballGirth: 250, ballWidth: 98, instepGirth: 251, calfGirth: null },
-  { productId: "RB-004", uk: 12, us: 13, eur: 45, footLength: 291, ballGirth: 256, ballWidth: 101, instepGirth: 257, calfGirth: null },
-
-  // RB-005 Ủng An Toàn Cam (High boot)
-  { productId: "RB-005", uk: 5, us: 6, eur: 38, footLength: 242, ballGirth: 218, ballWidth: 85, instepGirth: 222, calfGirth: 352 },
-  { productId: "RB-005", uk: 6, us: 7, eur: 39, footLength: 249, ballGirth: 224, ballWidth: 88, instepGirth: 228, calfGirth: 362 },
-  { productId: "RB-005", uk: 7, us: 8, eur: 40, footLength: 256, ballGirth: 230, ballWidth: 90, instepGirth: 233, calfGirth: 372 },
-  { productId: "RB-005", uk: 8, us: 9, eur: 41, footLength: 263, ballGirth: 236, ballWidth: 93, instepGirth: 239, calfGirth: 382 },
-  { productId: "RB-005", uk: 9, us: 10, eur: 42, footLength: 270, ballGirth: 242, ballWidth: 95, instepGirth: 244, calfGirth: 392 },
-  { productId: "RB-005", uk: 10, us: 11, eur: 43, footLength: 277, ballGirth: 248, ballWidth: 98, instepGirth: 250, calfGirth: 402 },
-  { productId: "RB-005", uk: 11, us: 12, eur: 44, footLength: 284, ballGirth: 254, ballWidth: 100, instepGirth: 255, calfGirth: 412 },
-  { productId: "RB-005", uk: 12, us: 13, eur: 45, footLength: 291, ballGirth: 260, ballWidth: 103, instepGirth: 261, calfGirth: 422 },
-
-  // RB-006 Ủng Trắng Thực Phẩm (High boot)
-  { productId: "RB-006", uk: 4, us: 5, eur: 37, footLength: 235, ballGirth: 210, ballWidth: 82, instepGirth: 215, calfGirth: 338 },
-  { productId: "RB-006", uk: 5, us: 6, eur: 38, footLength: 242, ballGirth: 216, ballWidth: 84, instepGirth: 221, calfGirth: 348 },
-  { productId: "RB-006", uk: 6, us: 7, eur: 39, footLength: 249, ballGirth: 222, ballWidth: 87, instepGirth: 226, calfGirth: 358 },
-  { productId: "RB-006", uk: 7, us: 8, eur: 40, footLength: 256, ballGirth: 228, ballWidth: 89, instepGirth: 232, calfGirth: 368 },
-  { productId: "RB-006", uk: 8, us: 9, eur: 41, footLength: 263, ballGirth: 234, ballWidth: 92, instepGirth: 237, calfGirth: 378 },
-  { productId: "RB-006", uk: 9, us: 10, eur: 42, footLength: 270, ballGirth: 240, ballWidth: 94, instepGirth: 243, calfGirth: 388 },
-  { productId: "RB-006", uk: 10, us: 11, eur: 43, footLength: 277, ballGirth: 246, ballWidth: 97, instepGirth: 248, calfGirth: 398 },
-  { productId: "RB-006", uk: 11, us: 12, eur: 44, footLength: 284, ballGirth: 252, ballWidth: 99, instepGirth: 254, calfGirth: 408 },
-  { productId: "RB-006", uk: 12, us: 13, eur: 45, footLength: 291, ballGirth: 258, ballWidth: 102, instepGirth: 259, calfGirth: 418 },
-
-  // RB-007 Ủng Ngắn Đen (Low boot)
-  { productId: "RB-007", uk: 4, us: 5, eur: 37, footLength: 235, ballGirth: 210, ballWidth: 82, instepGirth: 214, calfGirth: null },
-  { productId: "RB-007", uk: 5, us: 6, eur: 38, footLength: 242, ballGirth: 216, ballWidth: 84, instepGirth: 220, calfGirth: null },
-  { productId: "RB-007", uk: 6, us: 7, eur: 39, footLength: 249, ballGirth: 222, ballWidth: 87, instepGirth: 225, calfGirth: null },
-  { productId: "RB-007", uk: 7, us: 8, eur: 40, footLength: 256, ballGirth: 228, ballWidth: 89, instepGirth: 231, calfGirth: null },
-  { productId: "RB-007", uk: 8, us: 9, eur: 41, footLength: 263, ballGirth: 234, ballWidth: 92, instepGirth: 236, calfGirth: null },
-  { productId: "RB-007", uk: 9, us: 10, eur: 42, footLength: 270, ballGirth: 240, ballWidth: 94, instepGirth: 242, calfGirth: null },
-  { productId: "RB-007", uk: 10, us: 11, eur: 43, footLength: 277, ballGirth: 246, ballWidth: 97, instepGirth: 247, calfGirth: null },
-  { productId: "RB-007", uk: 11, us: 12, eur: 44, footLength: 284, ballGirth: 252, ballWidth: 99, instepGirth: 253, calfGirth: null },
-  { productId: "RB-007", uk: 12, us: 13, eur: 45, footLength: 291, ballGirth: 258, ballWidth: 102, instepGirth: 258, calfGirth: null },
-
-  // RB-008 Ủng Xanh Navy (High boot)
-  { productId: "RB-008", uk: 5, us: 6, eur: 38, footLength: 242, ballGirth: 217, ballWidth: 85, instepGirth: 221, calfGirth: 348 },
-  { productId: "RB-008", uk: 6, us: 7, eur: 39, footLength: 249, ballGirth: 223, ballWidth: 87, instepGirth: 227, calfGirth: 358 },
-  { productId: "RB-008", uk: 7, us: 8, eur: 40, footLength: 256, ballGirth: 229, ballWidth: 90, instepGirth: 232, calfGirth: 368 },
-  { productId: "RB-008", uk: 8, us: 9, eur: 41, footLength: 263, ballGirth: 235, ballWidth: 92, instepGirth: 238, calfGirth: 378 },
-  { productId: "RB-008", uk: 9, us: 10, eur: 42, footLength: 270, ballGirth: 241, ballWidth: 95, instepGirth: 243, calfGirth: 388 },
-  { productId: "RB-008", uk: 10, us: 11, eur: 43, footLength: 277, ballGirth: 247, ballWidth: 97, instepGirth: 249, calfGirth: 398 },
-  { productId: "RB-008", uk: 11, us: 12, eur: 44, footLength: 284, ballGirth: 253, ballWidth: 100, instepGirth: 254, calfGirth: 408 },
-  { productId: "RB-008", uk: 12, us: 13, eur: 45, footLength: 291, ballGirth: 259, ballWidth: 102, instepGirth: 260, calfGirth: 418 },
-];
-
-/**
- * Hướng dẫn đo chân
- */
-const MEASUREMENT_GUIDES = [
-  {
-    icon: "📏",
-    title: "Chiều dài bàn chân",
-    description: "Đặt chân lên giấy, đánh dấu điểm dài nhất của gót và ngón chân dài nhất. Đo khoảng cách giữa 2 điểm (mm)."
-  },
-  {
-    icon: "⭕",
-    title: "Vòng khớp ngón chân",
-    description: "Dùng thước dây quấn quanh phần rộng nhất của bàn chân (vùng khớp ngón cái và ngón út). Ghi số đo (mm)."
-  },
-  {
-    icon: "↔️",
-    title: "Bề ngang khớp ngón",
-    description: "Đo bề ngang phần rộng nhất bàn chân từ khớp ngón cái đến khớp ngón út (mm)."
-  },
-  {
-    icon: "🦶",
-    title: "Vòng mu bàn chân",
-    description: "Quấn thước dây quanh mu bàn chân (phần cao nhất khi đứng). Ghi số đo (mm)."
-  },
-  {
-    icon: "🦵",
-    title: "Vòng bắp chân",
-    description: "Đo vòng phần to nhất của bắp chân. Chỉ cần khi chọn ủng cao cổ (mm)."
-  }
+var GUIDE_STEPS = [
+  {title:'Chiều dài bàn chân',      desc:'Đặt chân lên giấy, đứng thẳng tự nhiên, đo từ gót đến đầu ngón chân dài nhất.', image:'images/guides/foot_length.jpg'},
+  {title:'Vòng khớp ngón chân',     desc:'Quấn thước dây quanh phần rộng nhất ở khớp ngón chân (qua ngón cái và ngón út).', image:'images/guides/ball_girth.jpg'},
+  {title:'Bề ngang khớp ngón chân', desc:'Đánh dấu hai điểm ngoài cùng của phần rộng nhất bàn chân, đo khoảng cách thẳng.', image:'images/guides/ball_width.jpg'},
+  {title:'Vòng mu bàn chân',        desc:'Xác định phần mu chân cao nhất, thường cách vòng khớp ngón 25mm, đo vòng quanh.', image:'images/guides/instep_girth.jpg'},
+  {title:'Vòng bắp chân',           desc:'Đứng thẳng tự nhiên, đo vòng quanh phần lớn nhất của bắp chân.', image:'images/guides/calf_girth.jpg'},
 ];

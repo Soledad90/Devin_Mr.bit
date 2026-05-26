@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rubber Boots - TVS - Tư vấn Size</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">TVS retail size advisor</p>
+        <h1>Rubber Boots - TVS - Tư vấn Size</h1>
+        <p class="customer-note">
+          Rất mong sự thông cảm từ khách hàng, để có một lựa chọn tốt nhất cho sự phù hợp cho đôi chân của mình, phiền khách hàng đo đúng hướng dẫn và nhập đúng thông số để chúng tôi có thể hỗ trợ quý khách tốt nhất, Xin cảm ơn quý khách
+        </p>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <section class="panel product-panel" aria-labelledby="product-title">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">Bước 1</p>
+            <h2 id="product-title">Chọn mã hàng / màu khách chọn</h2>
+          </div>
+          <span id="source-meta" class="meta-chip"></span>
+        </div>
+        <div id="product-grid" class="product-grid"></div>
+      </section>
+
+      <section class="workspace">
+        <form id="advisor-form" class="panel form-panel">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Bước 2</p>
+              <h2>Nhập số đo khách gửi</h2>
+            </div>
+            <button class="icon-button" type="reset" title="Xóa số đo" aria-label="Xóa số đo">
+              ↺
+            </button>
+          </div>
+
+          <div class="input-grid">
+            <label>
+              <span>Chiều dài bàn chân</span>
+              <input name="footLength" type="number" inputmode="decimal" min="120" max="340" step="0.1" placeholder="VD: 255" required>
+              <small>mm</small>
+            </label>
+            <label>
+              <span>Vòng khớp ngón chân</span>
+              <input name="ballGirth" type="number" inputmode="decimal" min="120" max="310" step="0.1" placeholder="VD: 224" required>
+              <small>mm</small>
+            </label>
+            <label>
+              <span>Bề ngang khớp ngón chân</span>
+              <input name="ballWidth" type="number" inputmode="decimal" min="50" max="150" step="0.1" placeholder="VD: 92" required>
+              <small>mm</small>
+            </label>
+            <label>
+              <span>Vòng mu bàn chân</span>
+              <input name="instepGirth" type="number" inputmode="decimal" min="120" max="310" step="0.1" placeholder="VD: 227" required>
+              <small>mm</small>
+            </label>
+            <label>
+              <span>Vòng bắp chân</span>
+              <input name="calfGirth" type="number" inputmode="decimal" min="160" max="520" step="0.1" placeholder="VD: 390">
+              <small>mm</small>
+            </label>
+            <label>
+              <span>Nhu cầu độ rộng</span>
+              <select name="comfort">
+                <option value="standard">Vừa chân</option>
+                <option value="socks">Mang vớ dày</option>
+                <option value="roomy">Thích rộng rãi</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="check-row">
+            <input name="removeInsole" type="checkbox">
+            <span>Khách chấp nhận tháo lót đế nếu cần thêm độ rộng</span>
+          </label>
+
+          <button class="primary-action" type="submit">Đề xuất size</button>
+        </form>
+
+        <section id="result-panel" class="panel result-panel" aria-live="polite">
+          <div class="empty-state">
+            <h2>Đợi số đo đầu vào</h2>
+            <p>Nhập số đo theo mm, chọn mã khách thích, hệ thống sẽ gợi ý size và các mã gần tối ưu để sale tư vấn tiếp.</p>
+          </div>
+        </section>
+      </section>
+
+      <section class="panel guide-panel">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">Bước 3</p>
+            <h2>Hướng dẫn khách đo đúng</h2>
+          </div>
+        </div>
+        <div id="guide-grid" class="guide-grid"></div>
+      </section>
+
+      <section class="panel table-panel">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">Bảng tra cứu</p>
+            <h2>Thông số theo mã và size</h2>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table id="size-table">
+            <thead>
+              <tr>
+                <th>Mã</th>
+                <th>UK</th>
+                <th>US</th>
+                <th>EUR</th>
+                <th>Dài chân</th>
+                <th>Vòng khớp</th>
+                <th>Ngang khớp</th>
+                <th>Vòng mu</th>
+                <th>Vòng bắp</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

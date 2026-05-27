@@ -122,8 +122,18 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;color:var(--
 .guide-modal-close{position:absolute;top:.5rem;right:.75rem;background:rgba(0,0,0,.5);color:#fff;border:none;border-radius:50%;width:32px;height:32px;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2}
 .guide-modal-close:hover{background:rgba(0,0,0,.75)}
 
-/* Table */
-.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+/* Collapsible Table */
+.table-collapsible{border:none;margin:0}
+.table-toggle{display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:4px 0;list-style:none;user-select:none}
+.table-toggle::-webkit-details-marker{display:none}
+.table-toggle .eyebrow{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);font-weight:700;margin-bottom:2px}
+.table-toggle h2{font-size:1rem;font-weight:700}
+.toggle-icon{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--brand-light);color:var(--brand);font-size:1.1rem;font-weight:700;transition:transform var(--transition),background var(--transition);flex-shrink:0}
+.toggle-icon::after{content:"\25BC";font-size:.75rem;transition:transform .25s ease}
+.table-collapsible[open] .toggle-icon::after{transform:rotate(180deg)}
+.table-collapsible[open] .toggle-icon{background:var(--brand);color:#fff}
+.table-toggle:hover .toggle-icon{background:var(--brand);color:#fff}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:16px}
 #size-table{width:100%;border-collapse:collapse;font-size:.82rem}
 #size-table thead{background:var(--brand);color:#fff}
 #size-table th{padding:10px 12px;text-align:left;white-space:nowrap;font-weight:700;font-size:.73rem;letter-spacing:.05em}

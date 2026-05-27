@@ -62,17 +62,22 @@
 
   <!-- Bảng tra cứu -->
   <section class="panel">
-    <div class="section-title"><div><p class="eyebrow">Bảng tra cứu</p><h2>Thông số theo mã và size</h2></div></div>
-    <div class="table-wrap">
-      <table id="size-table">
-        <thead><tr>
-          <th>Mã</th><th>UK</th><th>US</th><th>EUR</th>
-          <th>Dài chân (mm)</th><th>Vòng khớp (mm)</th><th>Ngang khớp (mm)</th>
-          <th>Vòng mu (mm)</th><th>Vòng bắp (mm)</th><th>Cao ủng (mm)</th>
-        </tr></thead>
-        <tbody></tbody>
-      </table>
-    </div>
+    <details id="table-details" class="table-collapsible">
+      <summary class="table-toggle">
+        <div><p class="eyebrow">Bảng tra cứu</p><h2>Thông số theo mã và size</h2></div>
+        <span class="toggle-icon"></span>
+      </summary>
+      <div class="table-wrap">
+        <table id="size-table">
+          <thead><tr>
+            <th>Mã</th><th>UK</th><th>US</th><th>EUR</th>
+            <th>Dài chân (mm)</th><th>Vòng khớp (mm)</th><th>Ngang khớp (mm)</th>
+            <th>Vòng mu (mm)</th><th>Vòng bắp (mm)</th><th>Cao ủng (mm)</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </details>
   </section>
 </main>
 <script src="data.js"></script>
